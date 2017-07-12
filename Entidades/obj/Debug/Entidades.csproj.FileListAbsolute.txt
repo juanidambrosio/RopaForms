@@ -1,0 +1,5 @@
+C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Entidades\bin\Debug\Entidades.dll
+C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Entidades\bin\Debug\Entidades.pdb
+C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Entidades\obj\Debug\Entidades.dll
+C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Entidades\obj\Debug\Entidades.pdb

@@ -18,11 +18,9 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void buzosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void agregarModificarEliminarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            // 1. Crear un objeto del form a mostrar
-
-            frmAltaProducto objForm = new frmAltaProducto(TiposEnum.Buzo);
+            frmAltaProducto objForm = new frmAltaProducto();
             objForm.StartPosition = this.StartPosition;
             objForm.Show();
         }

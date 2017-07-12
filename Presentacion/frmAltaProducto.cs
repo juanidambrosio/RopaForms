@@ -13,14 +13,18 @@ namespace Presentacion
 {
     public partial class frmAltaProducto : Form
     {
-        public frmAltaProducto(TiposEnum tipoProducto)
+        Logica.Producto logicaProducto = new Logica.Producto();
+        public frmAltaProducto()
         {
             InitializeComponent();
-            this.Text = "Administración de " + tipoProducto.ToString() + "s";
+           
             
             
         }
 
-      
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            //TODO: Agregar el formulario adicional y cambiar el nombre del padre.
+        }
     }
 }

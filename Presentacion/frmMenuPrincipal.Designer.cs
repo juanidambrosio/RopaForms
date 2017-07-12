@@ -31,12 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarModificarEliminarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buzosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.camperasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calzasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pollerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shortsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.topsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDePreciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarModificarEliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,53 +64,10 @@
             // 
             // agregarModificarEliminarToolStripMenuItem1
             // 
-            this.agregarModificarEliminarToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buzosToolStripMenuItem,
-            this.camperasToolStripMenuItem,
-            this.calzasToolStripMenuItem,
-            this.pollerasToolStripMenuItem,
-            this.shortsToolStripMenuItem,
-            this.topsToolStripMenuItem});
             this.agregarModificarEliminarToolStripMenuItem1.Name = "agregarModificarEliminarToolStripMenuItem1";
             this.agregarModificarEliminarToolStripMenuItem1.Size = new System.Drawing.Size(220, 22);
             this.agregarModificarEliminarToolStripMenuItem1.Text = "Agregar/Modificar/Eliminar";
-            // 
-            // buzosToolStripMenuItem
-            // 
-            this.buzosToolStripMenuItem.Name = "buzosToolStripMenuItem";
-            this.buzosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.buzosToolStripMenuItem.Text = "Buzos";
-            this.buzosToolStripMenuItem.Click += new System.EventHandler(this.buzosToolStripMenuItem_Click);
-            // 
-            // camperasToolStripMenuItem
-            // 
-            this.camperasToolStripMenuItem.Name = "camperasToolStripMenuItem";
-            this.camperasToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.camperasToolStripMenuItem.Text = "Camperas";
-            // 
-            // calzasToolStripMenuItem
-            // 
-            this.calzasToolStripMenuItem.Name = "calzasToolStripMenuItem";
-            this.calzasToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.calzasToolStripMenuItem.Text = "Calzas";
-            // 
-            // pollerasToolStripMenuItem
-            // 
-            this.pollerasToolStripMenuItem.Name = "pollerasToolStripMenuItem";
-            this.pollerasToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.pollerasToolStripMenuItem.Text = "Polleras";
-            // 
-            // shortsToolStripMenuItem
-            // 
-            this.shortsToolStripMenuItem.Name = "shortsToolStripMenuItem";
-            this.shortsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.shortsToolStripMenuItem.Text = "Shorts";
-            // 
-            // topsToolStripMenuItem
-            // 
-            this.topsToolStripMenuItem.Name = "topsToolStripMenuItem";
-            this.topsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.topsToolStripMenuItem.Text = "Tops";
+            this.agregarModificarEliminarToolStripMenuItem1.Click += new System.EventHandler(this.agregarModificarEliminarToolStripMenuItem1_Click);
             // 
             // listaDePreciosToolStripMenuItem
             // 
@@ -195,11 +146,5 @@
         private System.Windows.Forms.ToolStripMenuItem ingresosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem egresosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarModificarEliminarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem buzosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem camperasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calzasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pollerasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shortsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem topsToolStripMenuItem;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Producto
+   public class Producto
     {
         public TiposEnum TipoProducto { get; set; }
         public MarcasEnum Marca { get; set; }
