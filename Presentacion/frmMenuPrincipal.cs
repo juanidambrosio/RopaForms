@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace Presentacion
         public frmMenuPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void buzosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // 1. Crear un objeto del form a mostrar
+
+            frmAltaProducto objForm = new frmAltaProducto(TiposEnum.Buzo);
+            objForm.StartPosition = this.StartPosition;
+            objForm.Show();
         }
     }
 }
