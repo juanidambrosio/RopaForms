@@ -7,8 +7,9 @@ C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\obj\De
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.pdb
-C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmAltaProducto.resources
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\bin\Debug\Entidades.dll
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\bin\Debug\Logica.dll
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\bin\Debug\Entidades.pdb
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\bin\Debug\Logica.pdb
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmAdminProducto.resources
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmAltaProducto.resources

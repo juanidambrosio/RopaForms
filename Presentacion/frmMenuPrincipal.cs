@@ -20,7 +20,7 @@ namespace Presentacion
 
         private void agregarModificarEliminarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmAltaProducto objForm = new frmAltaProducto();
+            frmAdminProducto objForm = new frmAdminProducto();
             objForm.StartPosition = this.StartPosition;
             objForm.Show();
         }
