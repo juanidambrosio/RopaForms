@@ -10,6 +10,8 @@ namespace Entidades
     {
         public TiposEnum TipoProducto { get; set; }
         public MarcasEnum Marca { get; set; }
+        
+        public string Descripcion { get; set; }
 
         public double PrecioInicial { get; set; }
         public double Peso { get; set; }

@@ -10,16 +10,12 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class frmAltaProducto : BaseForm
+    public partial class BaseForm : Form
     {
-        public frmAltaProducto()
+        public BaseForm()
         {
             InitializeComponent();
-        }
-
-        public frmAltaProducto(Entidades.Producto)
-        {
-
+            this.Font = new Font("Arial", 12);
         }
     }
 }
