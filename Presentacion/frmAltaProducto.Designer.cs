@@ -38,8 +38,9 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.nudPrecio = new System.Windows.Forms.NumericUpDown();
             this.nudStockInicial = new System.Windows.Forms.NumericUpDown();
-            this.lblAceptar = new System.Windows.Forms.Button();
-            this.lblCancelar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStockInicial)).BeginInit();
             this.SuspendLayout();
@@ -141,35 +142,50 @@
             this.nudStockInicial.Size = new System.Drawing.Size(180, 26);
             this.nudStockInicial.TabIndex = 9;
             // 
-            // lblAceptar
+            // btnAgregar
             // 
-            this.lblAceptar.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.lblAceptar.Location = new System.Drawing.Point(122, 447);
-            this.lblAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lblAceptar.Name = "lblAceptar";
-            this.lblAceptar.Size = new System.Drawing.Size(147, 57);
-            this.lblAceptar.TabIndex = 10;
-            this.lblAceptar.Text = "Aceptar";
-            this.lblAceptar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnAgregar.Location = new System.Drawing.Point(122, 447);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(147, 57);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Visible = false;
             // 
-            // lblCancelar
+            // btnCancelar
             // 
-            this.lblCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.lblCancelar.Location = new System.Drawing.Point(465, 447);
-            this.lblCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lblCancelar.Name = "lblCancelar";
-            this.lblCancelar.Size = new System.Drawing.Size(128, 57);
-            this.lblCancelar.TabIndex = 11;
-            this.lblCancelar.Text = "Cancelar";
-            this.lblCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnCancelar.Location = new System.Drawing.Point(465, 447);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(128, 57);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnModificar.Location = new System.Drawing.Point(122, 447);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(147, 57);
+            this.btnModificar.TabIndex = 12;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Visible = false;
             // 
             // frmAltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 521);
-            this.Controls.Add(this.lblCancelar);
-            this.Controls.Add(this.lblAceptar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.nudStockInicial);
             this.Controls.Add(this.nudPrecio);
             this.Controls.Add(this.txtDescripcion);
@@ -202,7 +218,8 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.NumericUpDown nudPrecio;
         private System.Windows.Forms.NumericUpDown nudStockInicial;
-        private System.Windows.Forms.Button lblAceptar;
-        private System.Windows.Forms.Button lblCancelar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
