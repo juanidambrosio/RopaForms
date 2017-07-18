@@ -19,7 +19,7 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAltaVendedor AltaVendedores = new frmAltaVendedor();
+            var AltaVendedores = new frmAltaVendedor();
             AltaVendedores.StartPosition = this.StartPosition;
             AltaVendedores.Show();
         }
@@ -30,6 +30,22 @@ namespace Presentacion
             frmAltaVendedor AltaVendedores = new frmAltaVendedor(VendedorId);
             AltaVendedores.StartPosition = this.StartPosition;
             AltaVendedores.Show();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string message = "Estás seguro de querer borrar el vendedor seleccionado?";
+            string caption = "Atencion";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+
+            result = MessageBox.Show(message, caption, buttons);
+
+            if (result == DialogResult.Yes)
+            {
+                //TODO: Ir a buscar a la base de datos el ID con el producto para eliminarlo
+
+            }
         }
     }
 }

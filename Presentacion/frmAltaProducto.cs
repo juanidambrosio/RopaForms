@@ -47,5 +47,6 @@ namespace Presentacion
             Producto.Descripcion = txtDescripcion.Text;
             LogicaProducto.Modificar(Producto);
         }
+
     }
 }
