@@ -10,23 +10,26 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class frmAltaProducto : BaseForm
+    public partial class frmAltaVendedor : BaseForm
     {
-        Logica.Producto LogicaProducto = new Logica.Producto();
-        public frmAltaProducto()
+        Logica.Vendedor LogicaVendedor = new Logica.Vendedor();
+        public frmAltaVendedor()
         {
             InitializeComponent();
             btnAgregar.Visible = true;
             btnModificar.Visible = false;
         }
 
-        public frmAltaProducto(Entidades.Producto Producto)
+        public frmAltaVendedor(int Id)
         {
             InitializeComponent();
             btnAgregar.Visible = false;
             btnModificar.Visible = true;
-            txtDescripcion.Text = Producto.Descripcion;
-            //TODO: Ver como se asignan los distintos campos
+
+            var Vendedor = LogicaVendedor.TraerVendedor(Id);
+            txtApellido.Text = Vendedor.Apellido;
+            txtNombre.Text = Vendedor.Nombre;
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -36,17 +39,18 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Entidades.Producto Producto = new Entidades.Producto();
-            Producto.Descripcion = txtDescripcion.Text;
-            LogicaProducto.Agregar(Producto);
+            Entidades.Vendedor Vendedor = new Entidades.Vendedor();
+            Vendedor.Nombre = txtNombre.Text;
+            Vendedor.Apellido = txtApellido.Text;
+            LogicaVendedor.Agregar(Vendedor);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Entidades.Producto Producto = new Entidades.Producto();
-            Producto.Descripcion = txtDescripcion.Text;
-            LogicaProducto.Modificar(Producto);
+            Entidades.Vendedor Vendedor = new Entidades.Vendedor();
+            Vendedor.Nombre = txtNombre.Text;
+            Vendedor.Apellido = txtApellido.Text;
+            LogicaVendedor.Modificar(Vendedor);
         }
-
     }
 }

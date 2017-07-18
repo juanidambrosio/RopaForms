@@ -13,3 +13,7 @@ C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\bin\De
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Presentacion\bin\Debug\Logica.pdb
 C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmAdminProducto.resources
 C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmAltaProducto.resources
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\bin\Debug\Datos.dll
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\bin\Debug\Datos.pdb
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmAdminVendedores.resources
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmAltaVendedor.resources

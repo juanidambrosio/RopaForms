@@ -89,6 +89,7 @@
             this.agregarModificarEliminarToolStripMenuItem.Name = "agregarModificarEliminarToolStripMenuItem";
             this.agregarModificarEliminarToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.agregarModificarEliminarToolStripMenuItem.Text = "Agregar/Modificar/Eliminar";
+            this.agregarModificarEliminarToolStripMenuItem.Click += new System.EventHandler(this.agregarModificarEliminarToolStripMenuItem_Click);
             // 
             // movimientosDeStockToolStripMenuItem
             // 

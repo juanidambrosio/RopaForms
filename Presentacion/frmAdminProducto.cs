@@ -13,7 +13,7 @@ namespace Presentacion
 {
     public partial class frmAdminProducto : BaseForm
     {
-        Logica.Producto LogicaProducto = new Logica.Producto();
+        
         public frmAdminProducto()
         {
             InitializeComponent();
