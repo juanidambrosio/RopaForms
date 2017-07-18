@@ -15,11 +15,20 @@ namespace Presentacion
         public frmAltaProducto()
         {
             InitializeComponent();
+            btnAgregar.Visible = true;
+            btnModificar.Visible = false;
         }
 
-        public frmAltaProducto(Entidades.Producto)
+        public frmAltaProducto(Entidades.Producto Producto)
         {
+            InitializeComponent();
+            btnAgregar.Visible = false;
+            btnModificar.Visible = true;
+        }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
