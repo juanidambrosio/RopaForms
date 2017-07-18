@@ -24,5 +24,12 @@ namespace Presentacion
             objForm.StartPosition = this.StartPosition;
             objForm.Show();
         }
+
+        private void agregarModificarEliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdminVendedores AdminVendedores = new frmAdminVendedores();
+            AdminVendedores.StartPosition = this.StartPosition;
+            AdminVendedores.Show();
+        }
     }
 }

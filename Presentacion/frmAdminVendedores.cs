@@ -16,5 +16,20 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaVendedor AltaVendedores = new frmAltaVendedor();
+            AltaVendedores.StartPosition = this.StartPosition;
+            AltaVendedores.Show();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            int VendedorId = Convert.ToInt32(dgvVendedores.SelectedRows[0]);
+            frmAltaVendedor AltaVendedores = new frmAltaVendedor(VendedorId);
+            AltaVendedores.StartPosition = this.StartPosition;
+            AltaVendedores.Show();
+        }
     }
 }

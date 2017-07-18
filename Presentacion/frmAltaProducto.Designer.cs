@@ -48,55 +48,55 @@
             // lblTipoProducto
             // 
             this.lblTipoProducto.AutoSize = true;
-            this.lblTipoProducto.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoProducto.Font = new System.Drawing.Font("Arial", 12F);
             this.lblTipoProducto.Location = new System.Drawing.Point(75, 73);
             this.lblTipoProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoProducto.Name = "lblTipoProducto";
-            this.lblTipoProducto.Size = new System.Drawing.Size(113, 20);
+            this.lblTipoProducto.Size = new System.Drawing.Size(127, 18);
             this.lblTipoProducto.TabIndex = 0;
             this.lblTipoProducto.Text = "Tipo de Producto";
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Font = new System.Drawing.Font("Arial", 12F);
             this.lblMarca.Location = new System.Drawing.Point(75, 155);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(45, 20);
+            this.lblMarca.Size = new System.Drawing.Size(52, 18);
             this.lblMarca.TabIndex = 1;
             this.lblMarca.Text = "Marca";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Arial", 12F);
             this.lblDescripcion.Location = new System.Drawing.Point(75, 224);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(80, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(92, 18);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripcion";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Font = new System.Drawing.Font("Arial", 12F);
             this.lblPrecio.Location = new System.Drawing.Point(75, 300);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(48, 20);
+            this.lblPrecio.Size = new System.Drawing.Size(54, 18);
             this.lblPrecio.TabIndex = 3;
             this.lblPrecio.Text = "Precio";
             // 
             // lblStockInicial
             // 
             this.lblStockInicial.AutoSize = true;
-            this.lblStockInicial.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockInicial.Font = new System.Drawing.Font("Arial", 12F);
             this.lblStockInicial.Location = new System.Drawing.Point(75, 372);
             this.lblStockInicial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStockInicial.Name = "lblStockInicial";
-            this.lblStockInicial.Size = new System.Drawing.Size(80, 20);
+            this.lblStockInicial.Size = new System.Drawing.Size(91, 18);
             this.lblStockInicial.TabIndex = 4;
             this.lblStockInicial.Text = "Stock Inicial";
             // 
@@ -104,7 +104,7 @@
             // 
             this.cboTipoProducto.FormattingEnabled = true;
             this.cboTipoProducto.Location = new System.Drawing.Point(300, 72);
-            this.cboTipoProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoProducto.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoProducto.Name = "cboTipoProducto";
             this.cboTipoProducto.Size = new System.Drawing.Size(180, 26);
             this.cboTipoProducto.TabIndex = 5;
@@ -113,7 +113,7 @@
             // 
             this.cboMarca.FormattingEnabled = true;
             this.cboMarca.Location = new System.Drawing.Point(300, 154);
-            this.cboMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboMarca.Margin = new System.Windows.Forms.Padding(4);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(180, 26);
             this.cboMarca.TabIndex = 6;
@@ -121,7 +121,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(300, 224);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(482, 26);
             this.txtDescripcion.TabIndex = 7;
@@ -129,7 +129,7 @@
             // nudPrecio
             // 
             this.nudPrecio.Location = new System.Drawing.Point(300, 299);
-            this.nudPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.nudPrecio.Name = "nudPrecio";
             this.nudPrecio.Size = new System.Drawing.Size(180, 26);
             this.nudPrecio.TabIndex = 8;
@@ -137,7 +137,7 @@
             // nudStockInicial
             // 
             this.nudStockInicial.Location = new System.Drawing.Point(300, 372);
-            this.nudStockInicial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudStockInicial.Margin = new System.Windows.Forms.Padding(4);
             this.nudStockInicial.Name = "nudStockInicial";
             this.nudStockInicial.Size = new System.Drawing.Size(180, 26);
             this.nudStockInicial.TabIndex = 9;
@@ -146,19 +146,20 @@
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.btnAgregar.Location = new System.Drawing.Point(122, 447);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(147, 57);
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Visible = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 12F);
             this.btnCancelar.Location = new System.Drawing.Point(465, 447);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(128, 57);
             this.btnCancelar.TabIndex = 11;
@@ -168,7 +169,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnModificar.Font = new System.Drawing.Font("Arial", 12F);
             this.btnModificar.Location = new System.Drawing.Point(122, 447);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
@@ -177,6 +178,7 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Visible = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // frmAltaProducto
             // 
@@ -196,7 +198,7 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblTipoProducto);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmAltaProducto";
             this.Text = "Nuevo Producto";
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
