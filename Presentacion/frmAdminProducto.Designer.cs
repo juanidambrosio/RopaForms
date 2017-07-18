@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,10 +60,10 @@
             // 
             // ID
             // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle5;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
@@ -71,8 +71,8 @@
             // 
             // TipoProducto
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.TipoProducto.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.TipoProducto.DefaultCellStyle = dataGridViewCellStyle6;
             this.TipoProducto.HeaderText = "TipoProducto";
             this.TipoProducto.Name = "TipoProducto";
             this.TipoProducto.ReadOnly = true;
@@ -80,8 +80,8 @@
             // 
             // Descripcion
             // 
-            dataGridViewCellStyle11.Format = "Arial Narrow; 12pt";
-            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle7.Format = "Arial Narrow; 12pt";
+            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle7;
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
@@ -89,10 +89,10 @@
             // 
             // Precio
             // 
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            dataGridViewCellStyle12.Format = "C2";
-            dataGridViewCellStyle12.NullValue = null;
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            dataGridViewCellStyle8.Format = "C2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle8;
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
@@ -100,7 +100,7 @@
             // 
             // btnAgregarProducto
             // 
-            this.btnAgregarProducto.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnAgregarProducto.Font = new System.Drawing.Font("Arial", 12F);
             this.btnAgregarProducto.Location = new System.Drawing.Point(559, 49);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
@@ -112,7 +112,7 @@
             // 
             // btnModificarProducto
             // 
-            this.btnModificarProducto.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnModificarProducto.Font = new System.Drawing.Font("Arial", 12F);
             this.btnModificarProducto.Location = new System.Drawing.Point(559, 165);
             this.btnModificarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarProducto.Name = "btnModificarProducto";
@@ -124,7 +124,7 @@
             // 
             // btnEliminarProducto
             // 
-            this.btnEliminarProducto.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnEliminarProducto.Font = new System.Drawing.Font("Arial", 12F);
             this.btnEliminarProducto.Location = new System.Drawing.Point(559, 296);
             this.btnEliminarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
