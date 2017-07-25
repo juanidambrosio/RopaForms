@@ -74,6 +74,7 @@
             this.listaDePreciosToolStripMenuItem.Name = "listaDePreciosToolStripMenuItem";
             this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.listaDePreciosToolStripMenuItem.Text = "Lista de Precios";
+            this.listaDePreciosToolStripMenuItem.Click += new System.EventHandler(this.listaDePreciosToolStripMenuItem_Click);
             // 
             // vendedoresToolStripMenuItem
             // 

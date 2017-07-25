@@ -24,6 +24,11 @@ namespace Logica
             Datos.Producto.TraerProducto(id);
         }
 
+        public void TraerLista()
+        {
+            Datos.Producto.TraerLista();
+        }
+
         public void Eliminar(int Id)
         {
             Datos.Producto.Eliminar(Id);

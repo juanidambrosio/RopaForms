@@ -75,6 +75,12 @@
     <Compile Include="frmAltaVendedor.Designer.cs">
       <DependentUpon>frmAltaVendedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaPrecios.Designer.cs">
+      <DependentUpon>frmListaPrecios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltaVendedor.resx">
       <DependentUpon>frmAltaVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaPrecios.resx">
+      <DependentUpon>frmListaPrecios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
