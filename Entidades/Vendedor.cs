@@ -14,6 +14,5 @@ namespace Entidades
 
         public string Apellido { get; set; }
 
-        public List<Producto> Productos { get; set; }
     }
 }

@@ -17,3 +17,5 @@ C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\bin\De
 C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\bin\Debug\Datos.pdb
 C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmAdminVendedores.resources
 C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmAltaVendedor.resources
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmListaPrecios.resources
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Presentacion\obj\Debug\Presentacion.frmPedidos.resources

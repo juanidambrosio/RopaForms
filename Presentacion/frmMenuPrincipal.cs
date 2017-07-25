@@ -38,5 +38,14 @@ namespace Presentacion
             ListaPrecios.StartPosition = this.StartPosition;
             ListaPrecios.Show();
         }
+
+
+
+        private void gestiónDePedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPedidos Pedido = new frmPedidos();
+            Pedido.StartPosition = this.StartPosition;
+            Pedido.Show();
+        }
     }
 }
