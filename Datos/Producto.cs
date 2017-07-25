@@ -18,5 +18,15 @@ namespace Datos
         {
            //TODO: Modificar en la BD el producto existente
         }
+
+        public static void TraerProducto(int id)
+        {
+           //TODO: Buscar en la BD el producto asociado al id y cargarlo
+        }
+
+        public static void Eliminar(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

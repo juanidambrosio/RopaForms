@@ -44,7 +44,8 @@ namespace Presentacion
             if (result == DialogResult.Yes)
             {
                 //TODO: Ir a buscar a la base de datos el ID con el producto para eliminarlo
-
+                Logica.Vendedor LogicaVendedor = new Logica.Vendedor();
+                LogicaVendedor.Eliminar(Convert.ToInt32(dgvVendedores.SelectedRows[0]));
             }
         }
     }

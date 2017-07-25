@@ -11,7 +11,7 @@ namespace Datos
     {
         public static void Agregar(Entidades.Vendedor vendedor)
         {
-            throw new NotImplementedException();
+           
             //TODO: Agregar vendedor a la BD
         }
 
@@ -23,6 +23,11 @@ namespace Datos
         public static Entidades.Vendedor TraerVendedor(int id)
         {
             return new Entidades.Vendedor();//TODO: Consultar a la base de datos por el vendedor
+        }
+
+        public static void Eliminar(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

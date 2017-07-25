@@ -8,6 +8,7 @@ namespace Entidades
 {
    public class Producto
     {
+        public int IdProducto { get; set; }
         public TiposEnum TipoProducto { get; set; }
         public MarcasEnum Marca { get; set; }
         
