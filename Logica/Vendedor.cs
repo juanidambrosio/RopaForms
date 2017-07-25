@@ -29,5 +29,10 @@ namespace Logica
             else throw new Exception("El vendedor que se busca modificar es inexistente");
             
         }
+
+        public void Eliminar(int Id)
+        {
+            Datos.Vendedor.Eliminar(Id);
+        }
     }
 }

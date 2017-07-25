@@ -31,11 +31,11 @@ namespace Presentacion
 
         private void btnModificarProducto_Click(object sender, EventArgs e)
         {
-            Entidades.Producto Producto = new Entidades.Producto();
-            var frmAltaProducto = new frmAltaProducto(Producto);
+            int ProductoId = Convert.ToInt32(dgvProductos.SelectedRows[0]);
+            var frmAltaProducto = new frmAltaProducto(ProductoId);
             frmAltaProducto.StartPosition = this.StartPosition;
             frmAltaProducto.Show();
-            //TODO: Ir a buscar a la base de datos el ID con el producto para modificarlo
+           
         }
 
         private void btnEliminarProducto_Click(object sender, EventArgs e)
@@ -50,7 +50,8 @@ namespace Presentacion
             if (result == DialogResult.Yes)
             {
                 //TODO: Ir a buscar a la base de datos el ID con el producto para eliminarlo
-                 
+                Logica.Producto LogicaProducto = new Logica.Producto();
+                LogicaProducto.Eliminar(Convert.ToInt32(dgvProductos.SelectedRows[0]));
             }
         }
         }

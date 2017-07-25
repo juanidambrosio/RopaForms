@@ -18,5 +18,15 @@ namespace Logica
         {
             Datos.Producto.Modificar(producto);
         }
+
+        public void TraerProducto(int id)
+        {
+            Datos.Producto.TraerProducto(id);
+        }
+
+        public void Eliminar(int Id)
+        {
+            Datos.Producto.Eliminar(Id);
+        }
     }
 }
