@@ -24,6 +24,11 @@ namespace Datos
            //TODO: Buscar en la BD el producto asociado al id y cargarlo
         }
 
+        public static void TraerLista()
+        {
+           //TODO: Hacer consulta para traer lista de precios
+        }
+
         public static void Eliminar(int id)
         {
             throw new NotImplementedException();

@@ -31,5 +31,21 @@ namespace Presentacion
             AdminVendedores.StartPosition = this.StartPosition;
             AdminVendedores.Show();
         }
+
+        private void listaDePreciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaPrecios ListaPrecios = new frmListaPrecios();
+            ListaPrecios.StartPosition = this.StartPosition;
+            ListaPrecios.Show();
+        }
+
+
+
+        private void gestiónDePedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPedidos Pedido = new frmPedidos();
+            Pedido.StartPosition = this.StartPosition;
+            Pedido.Show();
+        }
     }
 }
