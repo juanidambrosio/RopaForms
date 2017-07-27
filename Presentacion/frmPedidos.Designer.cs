@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rbPedidoFreddy = new System.Windows.Forms.RadioButton();
             this.rbEntrega = new System.Windows.Forms.RadioButton();
             this.rbDevolucion = new System.Windows.Forms.RadioButton();
             this.panelOpcionesPedido = new System.Windows.Forms.Panel();
             this.lblRecordatorio = new System.Windows.Forms.Label();
             this.dgvPedido = new System.Windows.Forms.DataGridView();
+            this.SiNo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioComisionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelOpcionesPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.SuspendLayout();
@@ -105,27 +107,36 @@
             // 
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SiNo,
             this.Producto,
             this.Precio,
             this.Cantidad,
-            this.Total});
-            this.dgvPedido.Location = new System.Drawing.Point(250, 198);
+            this.Total,
+            this.PrecioComisionado});
+            this.dgvPedido.Location = new System.Drawing.Point(202, 189);
             this.dgvPedido.Name = "dgvPedido";
-            this.dgvPedido.Size = new System.Drawing.Size(585, 265);
+            this.dgvPedido.Size = new System.Drawing.Size(692, 265);
             this.dgvPedido.TabIndex = 5;
+            // 
+            // SiNo
+            // 
+            this.SiNo.HeaderText = "Si/No";
+            this.SiNo.Name = "SiNo";
             // 
             // Producto
             // 
             this.Producto.HeaderText = "Producto";
             this.Producto.Name = "Producto";
+            this.Producto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Precio
             // 
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Precio.HeaderText = "Precio (ARS)";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Precio.HeaderText = "Precio por unidad (ARS)";
             this.Precio.Name = "Precio";
+            this.Precio.Width = 150;
             // 
             // Cantidad
             // 
@@ -134,11 +145,17 @@
             // 
             // Total
             // 
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Total.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Total.DefaultCellStyle = dataGridViewCellStyle2;
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
+            // 
+            // PrecioComisionado
+            // 
+            this.PrecioComisionado.HeaderText = "Precio con Comisiones";
+            this.PrecioComisionado.Name = "PrecioComisionado";
+            this.PrecioComisionado.ReadOnly = true;
             // 
             // frmPedidos
             // 
@@ -167,9 +184,11 @@
         private System.Windows.Forms.Panel panelOpcionesPedido;
         private System.Windows.Forms.Label lblRecordatorio;
         private System.Windows.Forms.DataGridView dgvPedido;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SiNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioComisionado;
     }
 }

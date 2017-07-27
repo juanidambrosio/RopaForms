@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Datos
 {
@@ -11,7 +13,21 @@ namespace Datos
     {
         public static void Agregar(Entidades.Producto producto)
         {
-           //TODO: Agregar a la BD el nuevo producto
+                string strSP = "proc_alta_producto";
+                SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+                SqlCommand comAlta = new SqlCommand(strSP, objConexion);
+                comAlta.CommandType = CommandType.StoredProcedure;
+                comAlta.Parameters.AddWithValue("@TipoProducto", producto.TipoProducto);
+                comAlta.Parameters.AddWithValue("@Marca",producto.Marca);
+                comAlta.Parameters.AddWithValue("@Descripcion",producto.Descripcion);
+                comAlta.Parameters.AddWithValue("@PrecioInicial",producto.PrecioInicial);
+                comAlta.Parameters.AddWithValue("@Peso",producto.Peso);
+                comAlta.Parameters.AddWithValue("@Stock",producto.Stock);
+                objConexion.Open();
+                comAlta.ExecuteNonQuery();
+                objConexion.Close();
+
+            
         }
 
         public static void Modificar(Entidades.Producto producto)
