@@ -14,12 +14,14 @@ namespace Presentacion
     {
         bool Modifica = false; // Con la unica finalidad de distinguir entre una llamada a modificar o agregar
         Logica.Producto LogicaProducto = new Logica.Producto();
-        ErrorProvider errorProvider1;
+        ErrorProvider errorProvider1 = new ErrorProvider();
         public frmAltaProducto()
         {
             InitializeComponent();
             btnAgregar.Text = "Agregar";
             Modifica = false;
+            cboMarca.DataSource = LogicaProducto.TraerMarcas();
+            cboTipoProducto.DataSource = LogicaProducto.TraerTiposProducto();
         }
 
         public frmAltaProducto(int Id)
@@ -28,7 +30,9 @@ namespace Presentacion
             btnAgregar.Text = "Modificar";
             LogicaProducto.TraerProducto(Id);
             Modifica = true;
-           
+            cboMarca.DataSource = LogicaProducto.TraerMarcas();
+            cboTipoProducto.DataSource = LogicaProducto.TraerTiposProducto();
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -38,7 +42,7 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (ValidarCampos == true)
+            if (this.ValidarCampos())
             {
 
                 Entidades.Producto Producto = new Entidades.Producto();
@@ -59,7 +63,7 @@ namespace Presentacion
 
                 //Verificacion si es Agregar o Modificar
 
-                if (Modifica == true)
+                if (Modifica == false)
                 {
                     try
                     {
@@ -91,15 +95,14 @@ namespace Presentacion
             {
                 if (string.IsNullOrWhiteSpace(box.Text))
                 {
-                    errorProvider1.SetError(box, "Por favor, llenar todos los campos antes de continuar");
+                     errorProvider1.SetError(box, "Por favor, llenar todos los campos antes de continuar");
                     valorRetorno = false;
                 }
                 
             }
             return valorRetorno;
         }
-     
 
-
+       
     }
 }

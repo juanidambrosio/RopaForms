@@ -17,8 +17,8 @@ namespace Datos
                 SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
                 SqlCommand comAlta = new SqlCommand(strSP, objConexion);
                 comAlta.CommandType = CommandType.StoredProcedure;
-                comAlta.Parameters.AddWithValue("@TipoProducto", producto.TipoProducto);
-                comAlta.Parameters.AddWithValue("@Marca",producto.Marca);
+                comAlta.Parameters.AddWithValue("@TipoProducto", producto.TipoProducto.ToString());
+                comAlta.Parameters.AddWithValue("@Marca",producto.Marca.ToString());
                 comAlta.Parameters.AddWithValue("@Descripcion",producto.Descripcion);
                 comAlta.Parameters.AddWithValue("@PrecioInicial",producto.PrecioInicial);
                 comAlta.Parameters.AddWithValue("@Peso",producto.Peso);

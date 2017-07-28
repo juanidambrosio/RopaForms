@@ -33,5 +33,27 @@ namespace Logica
         {
             Datos.Producto.Eliminar(Id);
         }
+
+        public List<string> TraerTiposProducto()
+        {
+            List<string> lista = new List<string>();
+            foreach (TiposEnum p in Enum.GetValues(typeof(TiposEnum)))
+            {
+                lista.Add(p.ToString());
+
+            }
+            return lista;
+        }
+
+        public List<string> TraerMarcas()
+        {
+            List<string> lista = new List<string>();
+            foreach (MarcasEnum p in Enum.GetValues(typeof(MarcasEnum)))
+            {
+                lista.Add(p.ToString());
+
+            }
+            return lista;
+        }
     }
 }
