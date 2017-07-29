@@ -7,3 +7,4 @@ C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Logica\bin\Debug\En
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Logica\obj\Debug\Logica.dll
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Logica\obj\Debug\Logica.pdb
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Logica\bin\Debug\Datos.dll.config

@@ -5,3 +5,4 @@ C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Datos\bin\Debug\Ent
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Datos\obj\Debug\Datos.dll
 C:\Users\t-judamb\Documents\Visual Studio 2017\Projects\Ropa\Datos\obj\Debug\Datos.pdb
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Datos\bin\Debug\Datos.dll.config
