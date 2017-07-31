@@ -33,21 +33,60 @@ namespace Datos
         public static DataTable TraerTodos()
         {
             DataTable dt = new DataTable();
-            string strSQL = "Select IdProducto as ID,TipoProducto as TipoProducto, Descripcion, PrecioInicial as Precio from Productos";
+            string strSQL = "Select IdProducto as ID,TipoProducto as TipoProducto, Marca, Descripcion, Stock from Productos";
             SqlDataAdapter daTraerTodos = new SqlDataAdapter(strSQL, Conexion.strConexion);
             daTraerTodos.Fill(dt);
             return dt;
         }
 
-        public static void Modificar(Entidades.Producto producto)
+        public static Entidades.Producto TraerProducto(int id)
         {
-           //TODO: Modificar en la BD el producto existente
+            Entidades.Producto objEntidadProducto = new Entidades.Producto();
+            string strSQL = "Select * from productos where idProducto=" + id;
+            SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+            SqlCommand comTraerUno = new SqlCommand(strSQL, objConexion);
+            SqlDataReader drProducto;
+            objConexion.Open(); // abro conexion
+            drProducto = comTraerUno.ExecuteReader(); // cargo datareader con la ejecucion del command
+            if (drProducto.Read())
+            {
+                objEntidadProducto.IdProducto = Convert.ToInt32(drProducto["IdProducto"]);
+                objEntidadProducto.Descripcion = drProducto["Descripcion"].ToString();
+                objEntidadProducto.PrecioInicial = Convert.ToDouble(drProducto["PrecioInicial"]);
+                objEntidadProducto.Peso = Convert.ToDouble(drProducto["Peso"]);
+                objEntidadProducto.Stock = Convert.ToInt32(drProducto["Stock"]);
+
+                Entidades.TiposEnum tipoProducto = new Entidades.TiposEnum();
+                Enum.TryParse(drProducto["TipoProducto"].ToString(), out tipoProducto);
+                objEntidadProducto.TipoProducto = tipoProducto;
+
+                Entidades.MarcasEnum marca = new Entidades.MarcasEnum();
+                Enum.TryParse(drProducto["Marca"].ToString(), out marca);
+                objEntidadProducto.Marca = marca;
+            }
+            return objEntidadProducto;
+
         }
 
-        public static void TraerProducto(int id)
+        public static void Modificar(Entidades.Producto producto)
         {
-           //TODO: Buscar en la BD el producto asociado al id y cargarlo
+            string strSP = "proc_modificar_producto";
+            SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+            SqlCommand comAlta = new SqlCommand(strSP, objConexion);
+            comAlta.CommandType = CommandType.StoredProcedure;
+            comAlta.Parameters.AddWithValue("@IdProducto", producto.IdProducto);
+            comAlta.Parameters.AddWithValue("@TipoProducto", producto.TipoProducto.ToString());
+            comAlta.Parameters.AddWithValue("@Marca", producto.Marca.ToString());
+            comAlta.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
+            comAlta.Parameters.AddWithValue("@PrecioInicial", producto.PrecioInicial);
+            comAlta.Parameters.AddWithValue("@Peso", producto.Peso);
+            comAlta.Parameters.AddWithValue("@Stock", producto.Stock);
+            objConexion.Open();
+            comAlta.ExecuteNonQuery();
+            objConexion.Close();
         }
+
+      
 
         public static void TraerLista()
         {
@@ -56,7 +95,14 @@ namespace Datos
 
         public static void Eliminar(int id)
         {
-            throw new NotImplementedException();
+            string strSP = "proc_eliminar_producto";
+            SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+            SqlCommand comAlta = new SqlCommand(strSP, objConexion);
+            comAlta.CommandType = CommandType.StoredProcedure;
+            comAlta.Parameters.AddWithValue("@IdProducto", id);
+            objConexion.Open();
+            comAlta.ExecuteNonQuery();
+            objConexion.Close();
         }
     }
 }

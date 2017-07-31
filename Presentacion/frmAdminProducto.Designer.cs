@@ -41,17 +41,17 @@
             this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.AllowUserToOrderColumns = true;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(-3, 3);
+            this.dgvProductos.Location = new System.Drawing.Point(-4, 0);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(516, 518);
+            this.dgvProductos.Size = new System.Drawing.Size(775, 518);
             this.dgvProductos.TabIndex = 0;
             // 
             // btnAgregarProducto
             // 
             this.btnAgregarProducto.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnAgregarProducto.Location = new System.Drawing.Point(559, 49);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(796, 47);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(146, 60);
@@ -63,7 +63,7 @@
             // btnModificarProducto
             // 
             this.btnModificarProducto.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnModificarProducto.Location = new System.Drawing.Point(559, 165);
+            this.btnModificarProducto.Location = new System.Drawing.Point(796, 159);
             this.btnModificarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarProducto.Name = "btnModificarProducto";
             this.btnModificarProducto.Size = new System.Drawing.Size(146, 60);
@@ -75,7 +75,7 @@
             // btnEliminarProducto
             // 
             this.btnEliminarProducto.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnEliminarProducto.Location = new System.Drawing.Point(559, 296);
+            this.btnEliminarProducto.Location = new System.Drawing.Point(796, 274);
             this.btnEliminarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.Size = new System.Drawing.Size(146, 60);
@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 519);
+            this.ClientSize = new System.Drawing.Size(998, 519);
             this.Controls.Add(this.btnEliminarProducto);
             this.Controls.Add(this.btnModificarProducto);
             this.Controls.Add(this.btnAgregarProducto);

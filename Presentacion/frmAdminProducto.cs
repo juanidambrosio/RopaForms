@@ -18,11 +18,19 @@ namespace Presentacion
         {
             InitializeComponent();
             TraerTodos();
-            
-            
+
+            //Cambiar el ancho de las columnas
+
+            this.dgvProductos.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvProductos.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvProductos.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvProductos.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvProductos.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+
+
         }
 
-        private void TraerTodos()
+        public void TraerTodos()
         {
             Logica.Producto logicaProducto = new Logica.Producto();
             dgvProductos.DataSource = logicaProducto.TraerTodos();
@@ -37,7 +45,8 @@ namespace Presentacion
 
         private void btnModificarProducto_Click(object sender, EventArgs e)
         {
-            int ProductoId = Convert.ToInt32(dgvProductos.SelectedRows[0]);
+            DataGridViewCell Cell = dgvProductos.SelectedCells[0];
+            int ProductoId = Convert.ToInt32(Cell.Value.ToString());
             var frmAltaProducto = new frmAltaProducto(ProductoId);
             frmAltaProducto.StartPosition = this.StartPosition;
             frmAltaProducto.Show();
@@ -57,7 +66,9 @@ namespace Presentacion
             {
                 //TODO: Ir a buscar a la base de datos el ID con el producto para eliminarlo
                 Logica.Producto LogicaProducto = new Logica.Producto();
-                LogicaProducto.Eliminar(Convert.ToInt32(dgvProductos.SelectedRows[0]));
+                DataGridViewCell Cell = dgvProductos.SelectedCells[0];
+                LogicaProducto.Eliminar(Convert.ToInt32(Cell.Value.ToString()));
+                TraerTodos();
             }
         }
         }

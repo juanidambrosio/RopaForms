@@ -20,10 +20,6 @@ namespace Logica
             Datos.Producto.Modificar(producto);
         }
 
-        public void TraerProducto(int id)
-        {
-            Datos.Producto.TraerProducto(id);
-        }
 
         public void TraerLista()
         {
@@ -60,6 +56,11 @@ namespace Logica
 
             }
             return lista;
+        }
+
+        public Entidades.Producto TraerProducto(int id)
+        {
+           return Datos.Producto.TraerProducto(id);
         }
     }
 }
