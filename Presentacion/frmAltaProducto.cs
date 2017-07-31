@@ -15,6 +15,9 @@ namespace Presentacion
         bool Modifica = false; // Con la unica finalidad de distinguir entre una llamada a modificar o agregar
         Logica.Producto LogicaProducto = new Logica.Producto();
         ErrorProvider errorProvider1 = new ErrorProvider();
+        Entidades.Producto Producto = new Entidades.Producto();
+        frmAdminProducto obj = (frmAdminProducto)Application.OpenForms["frmAdminProducto"];
+
         public frmAltaProducto()
         {
             InitializeComponent();
@@ -22,16 +25,28 @@ namespace Presentacion
             Modifica = false;
             cboMarca.DataSource = LogicaProducto.TraerMarcas();
             cboTipoProducto.DataSource = LogicaProducto.TraerTiposProducto();
+
         }
 
         public frmAltaProducto(int Id)
         {
             InitializeComponent();
             btnAgregar.Text = "Modificar";
-            LogicaProducto.TraerProducto(Id);
-            Modifica = true;
             cboMarca.DataSource = LogicaProducto.TraerMarcas();
             cboTipoProducto.DataSource = LogicaProducto.TraerTiposProducto();
+            Producto = LogicaProducto.TraerProducto(Id);
+            Modifica = true;
+
+            int index = cboMarca.FindString(Producto.Marca.ToString());
+            cboMarca.SelectedIndex = index;
+
+            int index2 = cboTipoProducto.FindString(Producto.TipoProducto.ToString());
+            cboTipoProducto.SelectedIndex = index2;
+
+            txtDescripcion.Text = Producto.Descripcion;
+            nudPeso.Value = Convert.ToDecimal(Producto.Peso);
+            nudPrecio.Value = Convert.ToDecimal(Producto.PrecioInicial);
+            nudStockInicial.Value = Convert.ToInt32(Producto.Stock);
 
         }
 
@@ -45,7 +60,6 @@ namespace Presentacion
             if (this.ValidarCampos())
             {
 
-                Entidades.Producto Producto = new Entidades.Producto();
                 Producto.Descripcion = txtDescripcion.Text;
 
                 Entidades.MarcasEnum Marca = new Entidades.MarcasEnum();
@@ -68,6 +82,12 @@ namespace Presentacion
                     try
                     {
                         LogicaProducto.Agregar(Producto);
+                        MessageBox.Show("PRODUCTO AGREGADO CORRECTAMENTE");
+                        
+                        this.Close();
+                        obj.Show();
+                        obj.TraerTodos();
+                        
                     }
                     catch (Exception ex)
                     {
@@ -77,6 +97,9 @@ namespace Presentacion
                 else try
                     {
                         LogicaProducto.Modificar(Producto);
+                        MessageBox.Show("DATOS DEL PRODUCTO MODIFICADOS CORRECTAMENTE");
+                        this.Close();
+                        obj.TraerTodos();
                     }
                     catch (Exception ex)
                     {
