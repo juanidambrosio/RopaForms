@@ -95,7 +95,14 @@ namespace Datos
 
         public static void Eliminar(int id)
         {
-            throw new NotImplementedException();
+            string strSP = "proc_eliminar_producto";
+            SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+            SqlCommand comAlta = new SqlCommand(strSP, objConexion);
+            comAlta.CommandType = CommandType.StoredProcedure;
+            comAlta.Parameters.AddWithValue("@IdProducto", id);
+            objConexion.Open();
+            comAlta.ExecuteNonQuery();
+            objConexion.Close();
         }
     }
 }

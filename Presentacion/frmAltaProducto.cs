@@ -25,6 +25,7 @@ namespace Presentacion
             Modifica = false;
             cboMarca.DataSource = LogicaProducto.TraerMarcas();
             cboTipoProducto.DataSource = LogicaProducto.TraerTiposProducto();
+
         }
 
         public frmAltaProducto(int Id)

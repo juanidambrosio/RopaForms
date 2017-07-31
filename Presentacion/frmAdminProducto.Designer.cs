@@ -51,7 +51,7 @@
             // btnAgregarProducto
             // 
             this.btnAgregarProducto.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnAgregarProducto.Location = new System.Drawing.Point(779, 47);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(796, 47);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(146, 60);
@@ -63,7 +63,7 @@
             // btnModificarProducto
             // 
             this.btnModificarProducto.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnModificarProducto.Location = new System.Drawing.Point(779, 158);
+            this.btnModificarProducto.Location = new System.Drawing.Point(796, 159);
             this.btnModificarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarProducto.Name = "btnModificarProducto";
             this.btnModificarProducto.Size = new System.Drawing.Size(146, 60);
@@ -75,7 +75,7 @@
             // btnEliminarProducto
             // 
             this.btnEliminarProducto.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnEliminarProducto.Location = new System.Drawing.Point(779, 294);
+            this.btnEliminarProducto.Location = new System.Drawing.Point(796, 274);
             this.btnEliminarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.Size = new System.Drawing.Size(146, 60);
