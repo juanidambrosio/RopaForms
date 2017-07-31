@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using System.Data;
 
 namespace Logica
 {
@@ -27,6 +28,11 @@ namespace Logica
         public void TraerLista()
         {
             Datos.Producto.TraerLista();
+        }
+
+        public DataTable TraerTodos()
+        {
+            return Datos.Producto.TraerTodos();
         }
 
         public void Eliminar(int Id)
