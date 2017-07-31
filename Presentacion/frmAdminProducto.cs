@@ -19,10 +19,9 @@ namespace Presentacion
             InitializeComponent();
             TraerTodos();
             
-            
         }
 
-        private void TraerTodos()
+        public void TraerTodos()
         {
             Logica.Producto logicaProducto = new Logica.Producto();
             dgvProductos.DataSource = logicaProducto.TraerTodos();
@@ -37,7 +36,8 @@ namespace Presentacion
 
         private void btnModificarProducto_Click(object sender, EventArgs e)
         {
-            int ProductoId = Convert.ToInt32(dgvProductos.SelectedRows[0]);
+            DataGridViewCell Cell = dgvProductos.SelectedCells[0];
+            int ProductoId = Convert.ToInt32(Cell.Value.ToString());
             var frmAltaProducto = new frmAltaProducto(ProductoId);
             frmAltaProducto.StartPosition = this.StartPosition;
             frmAltaProducto.Show();
@@ -57,7 +57,8 @@ namespace Presentacion
             {
                 //TODO: Ir a buscar a la base de datos el ID con el producto para eliminarlo
                 Logica.Producto LogicaProducto = new Logica.Producto();
-                LogicaProducto.Eliminar(Convert.ToInt32(dgvProductos.SelectedRows[0]));
+                DataGridViewCell Cell = dgvProductos.SelectedCells[0];
+                LogicaProducto.Eliminar(Convert.ToInt32(Cell.Value.ToString()));
             }
         }
         }
