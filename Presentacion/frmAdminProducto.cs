@@ -17,9 +17,15 @@ namespace Presentacion
         public frmAdminProducto()
         {
             InitializeComponent();
-           
+            TraerTodos();
             
             
+        }
+
+        private void TraerTodos()
+        {
+            Logica.Producto logicaProducto = new Logica.Producto();
+            dgvProductos.DataSource = logicaProducto.TraerTodos();
         }
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)

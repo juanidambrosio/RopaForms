@@ -30,6 +30,15 @@ namespace Datos
             
         }
 
+        public static DataTable TraerTodos()
+        {
+            DataTable dt = new DataTable();
+            string strSQL = "Select IdProducto as ID,TipoProducto as TipoProducto, Descripcion, PrecioInicial as Precio from Productos";
+            SqlDataAdapter daTraerTodos = new SqlDataAdapter(strSQL, Conexion.strConexion);
+            daTraerTodos.Fill(dt);
+            return dt;
+        }
+
         public static void Modificar(Entidades.Producto producto)
         {
            //TODO: Modificar en la BD el producto existente
