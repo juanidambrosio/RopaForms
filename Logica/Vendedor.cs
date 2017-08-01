@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using System.Data;
 
 namespace Logica
 {
@@ -17,6 +18,11 @@ namespace Logica
         public void Modificar(Entidades.Vendedor vendedor)
         {
             Datos.Vendedor.Modificar(vendedor);
+        }
+
+        public DataTable TraerTodos()
+        {
+           return Datos.Vendedor.TraerTodos();
         }
 
         public Entidades.Vendedor TraerVendedor(int id)
@@ -34,5 +40,7 @@ namespace Logica
         {
             Datos.Vendedor.Eliminar(Id);
         }
+
+       
     }
 }

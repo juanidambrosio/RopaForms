@@ -47,5 +47,12 @@ namespace Presentacion
             Pedido.StartPosition = this.StartPosition;
             Pedido.Show();
         }
+
+        private void verStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVerStock VerStock = new frmVerStock();
+            VerStock.StartPosition = this.StartPosition;
+            VerStock.Show();
+        }
     }
 }

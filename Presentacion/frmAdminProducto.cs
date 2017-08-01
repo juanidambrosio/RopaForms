@@ -64,7 +64,7 @@ namespace Presentacion
 
             if (result == DialogResult.Yes)
             {
-                //TODO: Ir a buscar a la base de datos el ID con el producto para eliminarlo
+               
                 Logica.Producto LogicaProducto = new Logica.Producto();
                 DataGridViewCell Cell = dgvProductos.SelectedCells[0];
                 LogicaProducto.Eliminar(Convert.ToInt32(Cell.Value.ToString()));
