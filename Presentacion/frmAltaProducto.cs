@@ -17,6 +17,7 @@ namespace Presentacion
         ErrorProvider errorProvider1 = new ErrorProvider();
         Entidades.Producto Producto = new Entidades.Producto();
         frmAdminProducto obj = (frmAdminProducto)Application.OpenForms["frmAdminProducto"];
+       
 
         public frmAltaProducto()
         {
@@ -45,7 +46,7 @@ namespace Presentacion
 
             txtDescripcion.Text = Producto.Descripcion;
             nudPeso.Value = Convert.ToDecimal(Producto.Peso);
-            nudPrecio.Value = Convert.ToDecimal(Producto.PrecioInicial);
+            nudPrecio.Value = Convert.ToDecimal(Producto.PrecioPer);
             nudStockInicial.Value = Convert.ToInt32(Producto.Stock);
 
         }
@@ -70,7 +71,18 @@ namespace Presentacion
                 Enum.TryParse(cboTipoProducto.SelectedValue.ToString(), out TipoProducto);
                 Producto.TipoProducto = TipoProducto;
 
-                Producto.PrecioInicial = Convert.ToDouble(nudPrecio.Value);
+                Producto.PrecioPer = Convert.ToDecimal(nudPrecio.Value);
+
+                //Conversion de soles a dolares y pesos
+
+                string Pesos = Logica.Currency.CurrencyConvert(Convert.ToDecimal(Producto.PrecioPer), "PEN", "ARS");
+                string Dolares = Logica.Currency.CurrencyConvert(Convert.ToDecimal(Producto.PrecioPer), "PEN", "USD");
+                var Pesos2 = Pesos.Replace(".",",");
+                var Dolares2 = Dolares.Replace(".",",");
+                Producto.PrecioArs = Convert.ToDecimal(Pesos2.Substring(0, Pesos2.IndexOf(' ') -1));
+                Producto.PrecioUs = Convert.ToDecimal(Dolares2.Substring(0, Dolares2.IndexOf(' ') - 1));
+
+
                 Producto.Stock = Convert.ToInt32(nudStockInicial.Value);
                 Producto.Peso = Convert.ToDouble(nudPeso.Value);
 

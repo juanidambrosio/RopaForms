@@ -20,9 +20,11 @@ namespace Datos
                 comAlta.Parameters.AddWithValue("@TipoProducto", producto.TipoProducto.ToString());
                 comAlta.Parameters.AddWithValue("@Marca",producto.Marca.ToString());
                 comAlta.Parameters.AddWithValue("@Descripcion",producto.Descripcion);
-                comAlta.Parameters.AddWithValue("@PrecioInicial",producto.PrecioInicial);
                 comAlta.Parameters.AddWithValue("@Peso",producto.Peso);
                 comAlta.Parameters.AddWithValue("@Stock",producto.Stock);
+                comAlta.Parameters.AddWithValue("@PrecioPer", producto.PrecioPer);
+                comAlta.Parameters.AddWithValue("@PrecioUs", producto.PrecioUs);
+                comAlta.Parameters.AddWithValue("@PrecioArs", producto.PrecioArs);
                 objConexion.Open();
                 comAlta.ExecuteNonQuery();
                 objConexion.Close();
@@ -52,7 +54,7 @@ namespace Datos
             {
                 objEntidadProducto.IdProducto = Convert.ToInt32(drProducto["IdProducto"]);
                 objEntidadProducto.Descripcion = drProducto["Descripcion"].ToString();
-                objEntidadProducto.PrecioInicial = Convert.ToDouble(drProducto["PrecioInicial"]);
+                objEntidadProducto.PrecioPer = Convert.ToDecimal(drProducto["PrecioPer"]);
                 objEntidadProducto.Peso = Convert.ToDouble(drProducto["Peso"]);
                 objEntidadProducto.Stock = Convert.ToInt32(drProducto["Stock"]);
 
@@ -78,9 +80,11 @@ namespace Datos
             comAlta.Parameters.AddWithValue("@TipoProducto", producto.TipoProducto.ToString());
             comAlta.Parameters.AddWithValue("@Marca", producto.Marca.ToString());
             comAlta.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
-            comAlta.Parameters.AddWithValue("@PrecioInicial", producto.PrecioInicial);
             comAlta.Parameters.AddWithValue("@Peso", producto.Peso);
             comAlta.Parameters.AddWithValue("@Stock", producto.Stock);
+            comAlta.Parameters.AddWithValue("@PrecioPer", producto.PrecioPer);
+            comAlta.Parameters.AddWithValue("@PrecioUs", producto.PrecioUs);
+            comAlta.Parameters.AddWithValue("@PrecioArs", producto.PrecioArs);
             objConexion.Open();
             comAlta.ExecuteNonQuery();
             objConexion.Close();
@@ -88,9 +92,13 @@ namespace Datos
 
       
 
-        public static void TraerLista()
+        public static DataTable TraerLista()
         {
-           //TODO: Hacer consulta para traer lista de precios
+            DataTable dt = new DataTable();
+            string strSQL = "Select TipoProducto+' '+Marca+' '+Descripcion as Producto,PrecioInicial as 'Precio PER',PrecioInicial as 'Precio US',PrecioInicial as 'Precio ARS',1 as 'Comision Freddy', 22 * Peso as 'ComisionPeso', PrecioInicial + 1 + 22 * Peso as 'Precio Final'from Productos";
+            SqlDataAdapter daTraerTodos = new SqlDataAdapter(strSQL, Conexion.strConexion);
+            daTraerTodos.Fill(dt);
+            return dt;
         }
 
         public static void Eliminar(int id)
