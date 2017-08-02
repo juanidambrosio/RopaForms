@@ -18,9 +18,22 @@ namespace Presentacion
             InitializeComponent();
             dgvListaPrecios.AutoGenerateColumns = true;
             dgvListaPrecios.DataSource=LogicaProducto.TraerLista();
-            //TODO: Preguntarle bien a mamá que quiere ver en la lista de precios y los filtros
+            //TODO: Comisiones pasadas a pesos, filtros
         }
 
-      
+        private void btnGanancia_Click(object sender, EventArgs e)
+        {
+            int Aux = dgvListaPrecios.Rows.Count;
+            int I = 0;
+            while (I < Aux)
+            {
+                int Id = (int)dgvListaPrecios[0, I].Value;
+                decimal Data = (decimal)dgvListaPrecios[2, I].Value;
+                LogicaProducto.ActualizarPrecios(Id, Data, 0, 0);
+                //TODO: Generar la actualizacion de precios pegandole a Google Finance
+                I++;
+            }
+            dgvListaPrecios.DataSource=LogicaProducto.TraerLista();
+        }
     }
 }

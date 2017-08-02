@@ -23,7 +23,7 @@ namespace Logica
 
         public DataTable TraerLista()
         {
-           return Datos.Producto.TraerLista();
+            return Datos.Producto.TraerLista();
         }
 
         public DataTable TraerTodos()
@@ -45,6 +45,17 @@ namespace Logica
 
             }
             return lista;
+        }
+
+        public void ActualizarPrecios(int id, decimal data, decimal pesos, decimal dolares)
+        {
+            string Pesos = Logica.Currency.CurrencyConvert(data, "PEN", "ARS");
+            string Dolares = Logica.Currency.CurrencyConvert(data, "PEN", "USD");
+            var Pesos2 = Pesos.Replace(".", ",");
+            var Dolares2 = Dolares.Replace(".", ",");
+            pesos = Convert.ToDecimal(Pesos2.Substring(0, Pesos2.IndexOf(' ') - 1));
+            dolares = Convert.ToDecimal(Dolares2.Substring(0, Dolares2.IndexOf(' ') - 1));
+            Datos.Producto.ActualizarPrecios(id, data, pesos, dolares);
         }
 
         public List<string> TraerMarcas()
