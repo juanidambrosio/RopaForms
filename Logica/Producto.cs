@@ -23,7 +23,19 @@ namespace Logica
 
         public DataTable TraerLista()
         {
-            return Datos.Producto.TraerLista();
+            //Pasaje de dolares a pesos
+            string ComisionFreddyString = Logica.Currency.CurrencyConvert(1, "USD", "ARS");
+            string ComisionPesoString = Logica.Currency.CurrencyConvert(22, "USD", "ARS");
+
+            //Reemplazo puntos por comas para que no se copie erroneamente el valor
+            var ComisionFreddyString2 = ComisionFreddyString.Replace(".", ",");
+            var ComisionPesoString2 = ComisionPesoString.Replace(".", ",");
+            
+            //Saco parte del string que me impide pasar a decimal ("ARS")
+            decimal ComisionFreddy = Convert.ToDecimal(ComisionFreddyString2.Substring(0, ComisionFreddyString2.IndexOf(' ') - 1));
+            decimal ComisionPeso = Convert.ToDecimal(ComisionPesoString2.Substring(0, ComisionPesoString2.IndexOf(' ') - 1));
+            
+            return Datos.Producto.TraerLista(ComisionFreddy,ComisionPeso);
         }
 
         public DataTable TraerTodos()
