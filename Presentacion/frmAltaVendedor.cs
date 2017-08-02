@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -13,22 +8,26 @@ namespace Presentacion
     public partial class frmAltaVendedor : BaseForm
     {
         Logica.Vendedor LogicaVendedor = new Logica.Vendedor();
+        Entidades.Vendedor Vendedor = new Entidades.Vendedor();
+        bool Modificar = false;
+        List<ErrorProvider> errorProviders = new List<ErrorProvider> { new ErrorProvider(),new ErrorProvider()};
+
+        frmAdminVendedores obj = (frmAdminVendedores)Application.OpenForms["frmAdminVendedores"];
+
         public frmAltaVendedor()
         {
             InitializeComponent();
-            btnAgregar.Visible = true;
-            btnModificar.Visible = false;
+            btnAgregar.Text = "Agregar";
         }
 
         public frmAltaVendedor(int Id)
         {
             InitializeComponent();
-            btnAgregar.Visible = false;
-            btnModificar.Visible = true;
-
-            var Vendedor = LogicaVendedor.TraerVendedor(Id);
+            Vendedor = LogicaVendedor.TraerVendedor(Id);
             txtApellido.Text = Vendedor.Apellido;
             txtNombre.Text = Vendedor.Nombre;
+            Modificar = true;
+            btnAgregar.Text = "Modificar";
 
         }
 
@@ -39,18 +38,71 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Entidades.Vendedor Vendedor = new Entidades.Vendedor();
-            Vendedor.Nombre = txtNombre.Text;
-            Vendedor.Apellido = txtApellido.Text;
-            LogicaVendedor.Agregar(Vendedor);
-        }
+            
+            if (ValidarCampos())
+            {
+                Vendedor.Nombre = txtNombre.Text;
+                Vendedor.Apellido = txtApellido.Text;
+               
+            
+            if (Modificar == false)
+            {
+                try
+                {
+                    LogicaVendedor.Agregar(Vendedor);
+                    MessageBox.Show("VENDEDOR AGREGADO CORRECTAMENTE");
+                    this.Close();
+                    obj.TraerTodos();
+                }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            else try
+                {
+                    LogicaVendedor.Modificar(Vendedor);
+                    MessageBox.Show("VENDEDOR MODIFICADO CORRECTAMENTE");
+                    this.Close();
+                    obj.TraerTodos();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+         }
+
+            
+
+       
+
+        public bool ValidarCampos()
         {
-            Entidades.Vendedor Vendedor = new Entidades.Vendedor();
-            Vendedor.Nombre = txtNombre.Text;
-            Vendedor.Apellido = txtApellido.Text;
-            LogicaVendedor.Modificar(Vendedor);
+            int i = 0;
+            var boxes = Controls.OfType<TextBox>();
+            var valorRetorno = true;
+
+            foreach (var box in boxes)
+            {
+                
+                if (string.IsNullOrWhiteSpace(box.Text))
+                {
+
+                    errorProviders.ElementAt(i).SetError(box, "Por favor, llenar todos los campos antes de continuar");
+                    valorRetorno = false;
+                }
+                else
+                {
+                    errorProviders.ElementAt(i).Clear();
+                }
+                i++;
+            }
+            return valorRetorno;
         }
     }
 }

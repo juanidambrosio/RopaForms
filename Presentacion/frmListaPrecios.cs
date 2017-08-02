@@ -16,8 +16,11 @@ namespace Presentacion
         public frmListaPrecios()
         {
             InitializeComponent();
-            LogicaProducto.TraerLista();
+            dgvListaPrecios.AutoGenerateColumns = true;
+            dgvListaPrecios.DataSource=LogicaProducto.TraerLista();
             //TODO: Preguntarle bien a mamá que quiere ver en la lista de precios y los filtros
         }
+
+      
     }
 }

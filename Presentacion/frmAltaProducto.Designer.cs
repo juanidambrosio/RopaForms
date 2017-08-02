@@ -87,9 +87,9 @@
             this.lblPrecio.Location = new System.Drawing.Point(75, 255);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(101, 18);
+            this.lblPrecio.Size = new System.Drawing.Size(122, 18);
             this.lblPrecio.TabIndex = 3;
-            this.lblPrecio.Text = "Precio (ARS)";
+            this.lblPrecio.Text = "Precio (SOLES)";
             // 
             // lblStockInicial
             // 

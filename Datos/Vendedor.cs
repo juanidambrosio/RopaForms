@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Datos
 {
@@ -11,23 +13,70 @@ namespace Datos
     {
         public static void Agregar(Entidades.Vendedor vendedor)
         {
-           
-            //TODO: Agregar vendedor a la BD
+            string strSP = "proc_alta_vendedor";
+            SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+            SqlCommand comAlta = new SqlCommand(strSP, objConexion);
+            comAlta.CommandType = CommandType.StoredProcedure;
+            comAlta.Parameters.AddWithValue("@Nombre", vendedor.Nombre.ToString());
+            comAlta.Parameters.AddWithValue("@Apellido", vendedor.Apellido.ToString());
+            objConexion.Open();
+            comAlta.ExecuteNonQuery();
+            objConexion.Close();
+        }
+
+        public static DataTable TraerTodos()
+        {
+            DataTable dt = new DataTable();
+            string strSQL = "Select IdVendedor as ID,Nombre, Apellido from Vendedores";
+            SqlDataAdapter daTraerTodos = new SqlDataAdapter(strSQL, Conexion.strConexion);
+            daTraerTodos.Fill(dt);
+            return dt;
         }
 
         public static void Modificar(Entidades.Vendedor vendedor)
         {
-           //TODO: Modificar vendedor en la BD
+            string strSP = "proc_modificar_vendedor";
+            SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+            SqlCommand comAlta = new SqlCommand(strSP, objConexion);
+            comAlta.CommandType = CommandType.StoredProcedure;
+            comAlta.Parameters.AddWithValue("@IdVendedor",Convert.ToInt32(vendedor.IdVendedor));
+            comAlta.Parameters.AddWithValue("@Nombre", vendedor.Nombre);
+            comAlta.Parameters.AddWithValue("@Apellido", vendedor.Apellido.ToString());
+            objConexion.Open();
+            comAlta.ExecuteNonQuery();
+            objConexion.Close();
         }
 
         public static Entidades.Vendedor TraerVendedor(int id)
         {
-            return new Entidades.Vendedor();//TODO: Consultar a la base de datos por el vendedor
+            Entidades.Vendedor objEntidadVendedor = new Entidades.Vendedor();
+            string strSQL = "Select * from vendedores where idVendedor=" + id;
+            SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+            SqlCommand comTraerUno = new SqlCommand(strSQL, objConexion);
+            SqlDataReader drVendedor;
+            objConexion.Open(); // abro conexion
+            drVendedor = comTraerUno.ExecuteReader(); // cargo datareader con la ejecucion del command
+            if (drVendedor.Read())
+            {
+                objEntidadVendedor.IdVendedor = Convert.ToInt32(drVendedor["IdVendedor"]);
+                objEntidadVendedor.Nombre= drVendedor["Nombre"].ToString();
+                objEntidadVendedor.Apellido = drVendedor["Apellido"].ToString();
+
+            }
+            return objEntidadVendedor;
+
         }
 
         public static void Eliminar(int id)
         {
-            throw new NotImplementedException();
+            string strSP = "proc_eliminar_vendedor";
+            SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+            SqlCommand comAlta = new SqlCommand(strSP, objConexion);
+            comAlta.CommandType = CommandType.StoredProcedure;
+            comAlta.Parameters.AddWithValue("@IdVendedor", id);
+            objConexion.Open();
+            comAlta.ExecuteNonQuery();
+            objConexion.Close();
         }
     }
 }

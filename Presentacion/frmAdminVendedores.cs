@@ -12,9 +12,18 @@ namespace Presentacion
 {
     public partial class frmAdminVendedores : BaseForm
     {
+        Logica.Vendedor LogicaVendedor = new Logica.Vendedor();
+
         public frmAdminVendedores()
         {
             InitializeComponent();
+            TraerTodos();
+            dgvVendedores.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+        }
+
+        public void TraerTodos()
+        {
+            dgvVendedores.DataSource = LogicaVendedor.TraerTodos();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -26,7 +35,8 @@ namespace Presentacion
 
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
-            int VendedorId = Convert.ToInt32(dgvVendedores.SelectedRows[0]);
+            DataGridViewCell Cell = dgvVendedores.SelectedCells[0];
+            int VendedorId = Convert.ToInt32(Cell.Value.ToString());
             frmAltaVendedor AltaVendedores = new frmAltaVendedor(VendedorId);
             AltaVendedores.StartPosition = this.StartPosition;
             AltaVendedores.Show();
@@ -43,9 +53,11 @@ namespace Presentacion
 
             if (result == DialogResult.Yes)
             {
-                //TODO: Ir a buscar a la base de datos el ID con el producto para eliminarlo
+               
                 Logica.Vendedor LogicaVendedor = new Logica.Vendedor();
-                LogicaVendedor.Eliminar(Convert.ToInt32(dgvVendedores.SelectedRows[0]));
+                DataGridViewCell Cell = dgvVendedores.SelectedCells[0];
+                LogicaVendedor.Eliminar(Convert.ToInt32(Cell.Value.ToString()));
+                TraerTodos();
             }
         }
     }

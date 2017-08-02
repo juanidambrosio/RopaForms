@@ -36,6 +36,7 @@
             this.agregarModificarEliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDePedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +78,8 @@
             // vendedoresToolStripMenuItem
             // 
             this.vendedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarModificarEliminarToolStripMenuItem});
+            this.agregarModificarEliminarToolStripMenuItem,
+            this.verStockToolStripMenuItem});
             this.vendedoresToolStripMenuItem.Name = "vendedoresToolStripMenuItem";
             this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.vendedoresToolStripMenuItem.Text = "Vendedores";
@@ -103,6 +105,13 @@
             this.gestiónDePedidosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.gestiónDePedidosToolStripMenuItem.Text = "Gestión de Pedidos";
             this.gestiónDePedidosToolStripMenuItem.Click += new System.EventHandler(this.gestiónDePedidosToolStripMenuItem_Click);
+            // 
+            // verStockToolStripMenuItem
+            // 
+            this.verStockToolStripMenuItem.Name = "verStockToolStripMenuItem";
+            this.verStockToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.verStockToolStripMenuItem.Text = "Ver Stock";
+            this.verStockToolStripMenuItem.Click += new System.EventHandler(this.verStockToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -131,5 +140,6 @@
         private System.Windows.Forms.ToolStripMenuItem agregarModificarEliminarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónDePedidosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verStockToolStripMenuItem;
     }
 }

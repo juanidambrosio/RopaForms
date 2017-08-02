@@ -21,9 +21,9 @@ namespace Logica
         }
 
 
-        public void TraerLista()
+        public DataTable TraerLista()
         {
-            Datos.Producto.TraerLista();
+           return Datos.Producto.TraerLista();
         }
 
         public DataTable TraerTodos()
