@@ -41,6 +41,21 @@ namespace Datos
             return dt;
         }
 
+        public static void ActualizarPrecios(int id, decimal data, decimal pesos, decimal dolares)
+        {
+            string strSP = "proc_modificar_precios";
+            SqlConnection objConexion = new SqlConnection(Conexion.strConexion);
+            SqlCommand comAlta = new SqlCommand(strSP, objConexion);
+            comAlta.CommandType = CommandType.StoredProcedure;
+            comAlta.Parameters.AddWithValue("@IdProducto", id);
+            comAlta.Parameters.AddWithValue("@PrecioPer", data);
+            comAlta.Parameters.AddWithValue("@PrecioUs", pesos);
+            comAlta.Parameters.AddWithValue("@PrecioArs", dolares);
+            objConexion.Open();
+            comAlta.ExecuteNonQuery();
+            objConexion.Close();
+        }
+
         public static Entidades.Producto TraerProducto(int id)
         {
             Entidades.Producto objEntidadProducto = new Entidades.Producto();
@@ -92,11 +107,27 @@ namespace Datos
 
       
 
-        public static DataTable TraerLista()
+        public static DataTable TraerLista(decimal ComisionFreddy, decimal ComisionPeso)
         {
             DataTable dt = new DataTable();
-            string strSQL = "Select TipoProducto+' '+Marca+' '+Descripcion as Producto,PrecioInicial as 'Precio PER',PrecioInicial as 'Precio US',PrecioInicial as 'Precio ARS',1 as 'Comision Freddy', 22 * Peso as 'ComisionPeso', PrecioInicial + 1 + 22 * Peso as 'Precio Final'from Productos";
-            SqlDataAdapter daTraerTodos = new SqlDataAdapter(strSQL, Conexion.strConexion);
+            string strSQL = "Select IdProducto as Id, TipoProducto+' '+Marca+' '+Descripcion as Producto,PrecioSoles as 'Precio PER',PrecioUs as 'Precio US',PrecioArs as 'Precio ARS', @ComisionFreddy as 'Comision Freddy', @ComisionPeso * Peso as 'ComisionPeso', PrecioArs + @ComisionFreddy + (@ComisionPeso * Peso) as 'Precio Final'from Productos";
+            SqlDataAdapter daTraerTodos = new SqlDataAdapter(strSQL,Conexion.strConexion);
+            daTraerTodos.SelectCommand.Parameters.Add(new SqlParameter
+            {
+                ParameterName = "@ComisionFreddy",
+                Value = ComisionFreddy,
+                SqlDbType = SqlDbType.Decimal,
+                Precision = 18
+            });
+
+            daTraerTodos.SelectCommand.Parameters.Add(new SqlParameter
+            {
+                ParameterName = "@ComisionPeso",
+                Value = ComisionPeso,
+                SqlDbType = SqlDbType.Decimal,
+                Precision = 18
+            });
+
             daTraerTodos.Fill(dt);
             return dt;
         }

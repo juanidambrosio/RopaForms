@@ -23,7 +23,19 @@ namespace Logica
 
         public DataTable TraerLista()
         {
-           return Datos.Producto.TraerLista();
+            //Pasaje de dolares a pesos
+            string ComisionFreddyString = Logica.Currency.CurrencyConvert(1, "USD", "ARS");
+            string ComisionPesoString = Logica.Currency.CurrencyConvert(22, "USD", "ARS");
+
+            //Reemplazo puntos por comas para que no se copie erroneamente el valor
+            var ComisionFreddyString2 = ComisionFreddyString.Replace(".", ",");
+            var ComisionPesoString2 = ComisionPesoString.Replace(".", ",");
+            
+            //Saco parte del string que me impide pasar a decimal ("ARS")
+            decimal ComisionFreddy = Convert.ToDecimal(ComisionFreddyString2.Substring(0, ComisionFreddyString2.IndexOf(' ') - 1));
+            decimal ComisionPeso = Convert.ToDecimal(ComisionPesoString2.Substring(0, ComisionPesoString2.IndexOf(' ') - 1));
+            
+            return Datos.Producto.TraerLista(ComisionFreddy,ComisionPeso);
         }
 
         public DataTable TraerTodos()
@@ -45,6 +57,17 @@ namespace Logica
 
             }
             return lista;
+        }
+
+        public void ActualizarPrecios(int id, decimal data, decimal pesos, decimal dolares)
+        {
+            string Pesos = Logica.Currency.CurrencyConvert(data, "PEN", "ARS");
+            string Dolares = Logica.Currency.CurrencyConvert(data, "PEN", "USD");
+            var Pesos2 = Pesos.Replace(".", ",");
+            var Dolares2 = Dolares.Replace(".", ",");
+            pesos = Convert.ToDecimal(Pesos2.Substring(0, Pesos2.IndexOf(' ') - 1));
+            dolares = Convert.ToDecimal(Dolares2.Substring(0, Dolares2.IndexOf(' ') - 1));
+            Datos.Producto.ActualizarPrecios(id, data, pesos, dolares);
         }
 
         public List<string> TraerMarcas()
