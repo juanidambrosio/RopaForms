@@ -110,7 +110,7 @@ namespace Datos
         public static DataTable TraerLista(decimal ComisionFreddy, decimal ComisionPeso)
         {
             DataTable dt = new DataTable();
-            string strSQL = "Select IdProducto as Id, TipoProducto+' '+Marca+' '+Descripcion as Producto,PrecioSoles as 'Precio PER',PrecioUs as 'Precio US',PrecioArs as 'Precio ARS', @ComisionFreddy as 'Comision Freddy', @ComisionPeso * Peso as 'ComisionPeso', PrecioArs + @ComisionFreddy + (@ComisionPeso * Peso) as 'Precio Final'from Productos";
+            string strSQL = "Select IdProducto as Id, TipoProducto+' '+Marca+' '+Descripcion as Producto,PrecioSoles as 'Precio PER',PrecioUs as 'Precio US',PrecioArs as 'Precio ARS', @ComisionFreddy as 'Comision Freddy', @ComisionPeso * Peso as 'Comision Peso', PrecioArs + @ComisionFreddy + (@ComisionPeso * Peso) as 'Precio Final'from Productos";
             SqlDataAdapter daTraerTodos = new SqlDataAdapter(strSQL,Conexion.strConexion);
             daTraerTodos.SelectCommand.Parameters.Add(new SqlParameter
             {

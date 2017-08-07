@@ -16,8 +16,11 @@ namespace Presentacion
         public frmListaPrecios()
         {
             InitializeComponent();
-            dgvListaPrecios.AutoGenerateColumns = true;
+            dgvListaPrecios.AutoGenerateColumns = false;
             dgvListaPrecios.DataSource=LogicaProducto.TraerLista();
+            this.dgvListaPrecios.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvListaPrecios.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+ 
             //TODO: Comisiones pasadas a pesos, filtros
         }
 
