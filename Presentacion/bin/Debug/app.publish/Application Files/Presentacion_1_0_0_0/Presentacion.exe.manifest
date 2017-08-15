@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Presentacion.exe" version="1.0.0.0" publicKeyToken="a48ce5c5f595d262" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Presentacion.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Datos.dll" size="11264">
+      <assemblyIdentity name="Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iHOwsLMJ4JyHTiTCkpyYbxhjyf2W6AXUGMABKDvEoqw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Entidades.dll" size="6656">
+      <assemblyIdentity name="Entidades" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>aIErGSgvntno722WCtuPwH4O8kLoiqZWGbaB7jzQs2U=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Logica.dll" size="7680">
+      <assemblyIdentity name="Logica" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>jR8c0mUg9impktivCU1OCRedCxheaF6kZ1NotulvPNc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="35296">
+      <assemblyIdentity name="Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5yJ9LVieYI2i1VbRyeRcUeVaCskVKukHy6+igW5j568=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Presentacion.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=SOUTHAMERICA\t-judamb" issuerKeyHash="51dfcae35d50b874e75dd3c389fcf665f1f1242a" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>gGR609MqDcxFaYabcP1D5p/WIK6pX/zr82ywcXw+VgA=</DigestValue></Reference></SignedInfo><SignatureValue>WMjW5H056CKaFfglSmBl9rkUim2zQfpnKGncFAW2I70U+/k3v8Qal8cRK04CdQlPGM0YoaUBgPqwhvs1rF9tJ3wxzAzPgIdIMuSQlSb+4BHC3fJtWfIuhkDPlx79bbu/1NgwuncaL1ZzuULkqSzOfCf1XNUI/Iz1lL9Hit5JTqM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tRZQYf8dR0Fx+RQHPafQHJIhKebZCTRVeG+qKcLLnckQAALuLL8gqVx/OIICFmMKYkB2f3rIcK0DXJkNPSCxTsJuXvAUfAyI33LMbJROE72O/NS48wANAgIOwGvl2KgB2UXySP5J5aDys87/qswSNG0iq+nTwhaVxY9RUlvojBk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="00563e7c71b06cf3ebfc5fa9ae20d69fe643fd709b866945cc0d2ad3d37a6480" Description="" Url=""><as:assemblyIdentity name="Presentacion.exe" version="1.0.0.0" publicKeyToken="a48ce5c5f595d262" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=SOUTHAMERICA\t-judamb</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>vQRYUzr9OcZ3oSudq77/N28yar6yh+HuNYG0Cpw8PGU=</DigestValue></Reference></SignedInfo><SignatureValue>l7QZZp30FelHGO9vjqiE6ZhmYuJe8XetZqvLePoyZJLBTT8V2BAg4z26v9NRF+ph/s2qWbHmb9yxISE65CByWLtZrUTZYQg2jH2ptzzKL6JAfnPBuv+VYlzlzSTQUgPNMMdoUDK+R4yjlbAd9J/lqYDlNNqtk3loHg50vuhHpyE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tRZQYf8dR0Fx+RQHPafQHJIhKebZCTRVeG+qKcLLnckQAALuLL8gqVx/OIICFmMKYkB2f3rIcK0DXJkNPSCxTsJuXvAUfAyI33LMbJROE72O/NS48wANAgIOwGvl2KgB2UXySP5J5aDys87/qswSNG0iq+nTwhaVxY9RUlvojBk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQEz6/0/TR6ZlEagoHMu62qTANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioAUwBPAFUAVABIAEEATQBFAFIASQBDAEEAXAB0AC0AagB1AGQAYQBtAGIwHhcNMTcwODA3MDMwOTMwWhcNMTgwODA3MDkwOTMwWjA1MTMwMQYDVQQDHioAUwBPAFUAVABIAEEATQBFAFIASQBDAEEAXAB0AC0AagB1AGQAYQBtAGIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALUWUGH/HUdBcfkUBz2n0BySISnm2Qk0VXhvqinCy53JEAAC7iy/IKlcfziCAhZjCmJAdn96yHCtA1yZDT0gsU7Cbl7wFHwMiN9yzGyUThO9jvzUuPMADQICDsBr5dioAdlF8kj+SeWg8rPO/6rMEjRtIqvp08IWlcWPUVJb6IwZAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAP13Nq/uMquk5RRu+JjOLBrtZ5PBacufMgab1X8PbLInvJyuBOvKvazvJJIzoMP/xd/nQQnChBaGxlS2mR4gwatPQjuZFUkd43njqkq9zUQrIHzDg0AHkzQMQiggIavbVpqcscmNhWKv3yrsZ1dbAYR2+pWlDpdEE7jC1ypFvtOE=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
