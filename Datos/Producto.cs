@@ -69,7 +69,7 @@ namespace Datos
             {
                 objEntidadProducto.IdProducto = Convert.ToInt32(drProducto["IdProducto"]);
                 objEntidadProducto.Descripcion = drProducto["Descripcion"].ToString();
-                objEntidadProducto.PrecioPer = Convert.ToDecimal(drProducto["PrecioPer"]);
+                objEntidadProducto.PrecioPer = Convert.ToDecimal(drProducto["PrecioSoles"]);
                 objEntidadProducto.Peso = Convert.ToDouble(drProducto["Peso"]);
                 objEntidadProducto.Stock = Convert.ToInt32(drProducto["Stock"]);
 
