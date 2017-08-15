@@ -1,0 +1,4 @@
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Entidades\bin\Release\Entidades.dll
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Entidades\bin\Release\Entidades.pdb
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Entidades\obj\Release\Entidades.dll
+C:\Users\t-judamb\documents\visual studio 2017\Projects\Ropa\Entidades\obj\Release\Entidades.pdb

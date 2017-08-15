@@ -49,8 +49,8 @@ namespace Datos
             comAlta.CommandType = CommandType.StoredProcedure;
             comAlta.Parameters.AddWithValue("@IdProducto", id);
             comAlta.Parameters.AddWithValue("@PrecioPer", data);
-            comAlta.Parameters.AddWithValue("@PrecioUs", pesos);
-            comAlta.Parameters.AddWithValue("@PrecioArs", dolares);
+            comAlta.Parameters.AddWithValue("@PrecioUs", dolares);
+            comAlta.Parameters.AddWithValue("@PrecioArs", pesos);
             objConexion.Open();
             comAlta.ExecuteNonQuery();
             objConexion.Close();
