@@ -37,7 +37,7 @@ namespace Datos
             DataTable dt = new DataTable();
             string strSQL = "Select IdProducto as ID,TipoProducto as TipoProducto, Marca, Descripcion, Stock from Productos";
             SqlDataAdapter daTraerTodos = new SqlDataAdapter(strSQL, Conexion.strConexion);
-            daTraerTodos.Fill(dt);
+          daTraerTodos.Fill(dt);
             return dt;
         }
 
